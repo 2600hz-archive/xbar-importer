@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * User Uri and Sample definition
+ *
+ * @author Francis Genet & Peter Defebvre
+ * @version 1.3
+ * @since July 14, 2011 - 1.0
+ * 
+ */
+
+require_once 'CrossbarSession.php';
+
+class User extends CrossbarSession {
+	
+	protected $URI = 'users';
+	protected $SAMPLE = array(
+		'first_name' => NULL,
+		'last_name' => NULL,
+		'email' => NULL,
+		'username' => NULL,
+		'password' => NULL,
+		'verified' => NULL,
+		'lang' => NULL,
+		'timezone' => NULL,
+		'caller_id' => array(
+                        'external' => array(
+                            'name' => NULL,
+                            'number' => NULL
+                        ),
+                        'internal' => array(
+                            'name' => NULL,
+                            'number' => NULL
+                        ),
+                        'emergency' => array(
+                            'name' => NULL,
+                            'number' => NULL
+                        )
+		),
+		'caller_id_options' => array(
+			'reformat' => null
+		),
+		'call_forward' => array(
+			'enabled' => NULL,
+			'number' => NULL,
+			'require_keypress' => NULL,
+			'keep_caller_id' => NULL
+		),
+		'vm_to_email_enabled' => NULL
+	);
+}
+
+?>
